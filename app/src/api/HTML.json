@@ -1,0 +1,34 @@
+{
+    "questions": [{
+        "question": "What does it mean <!DOCTYPE html> at the start of the HTML file ?",
+        "answers": [{
+            "answer": "File is written in  XHTML 1.1 version ",
+            "valid": false
+        }, {
+            "answer": "File is written in XHTML 1.0 Strict version ",
+            "valid": false
+        }, {
+            "answer": "File  is written in  HTML 4.01 version ",
+            "valid": false
+        }, {
+            "answer": "File is written in HTML5 version ",
+            "valid": true
+        }]
+    }, {
+        "question": "Using Emmet the following <strong>ul>li*8</strong> will add ?",
+        "answers": [{
+            "answer": "8 <ul> elements with 1 <li> element",
+            "valid": false
+        }, {
+            "answer": "8 <ul> elements and 8 <li> elements",
+            "valid": false
+        }, {
+            "answer": "1 <ul> element with 8 <li> elements",
+            "valid": true
+        }, {
+            "answer": "1 <ul> element with 8 <li> elements with values from 1 to 8",
+            "valid": false
+        }]
+    }
+    ]
+}

@@ -1,0 +1,127 @@
+@import '_mixins.scss';
+
+.test {
+    width: 100%;
+    margin-top: 3rem;
+}
+.test__headline {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0.4rem;
+    text-align: center;
+}
+.question-container {
+    border: 1px solid $mainGreen;
+    color: white;
+    margin: 0 auto;
+    padding: 0.8em;
+    perspective: 200px;
+    perspective-origin: right;
+    position: relative;
+    text-align: center;
+    transform-style: preserve-3d;
+    width: 85%;
+  
+    @include medium {
+        width: 93%;
+        padding: 0.5em;
+    }
+
+    @include large {
+        width: calc(18vw + 40em);
+        padding: 1em;
+    }
+
+    @include landscape {
+        font-size: 0.8rem;
+    }
+}
+
+.answer {
+    height: auto;
+    display: block;
+    margin: 1em auto 0; 
+    padding: 0.5rem;   
+    border: 1px solid $mainGreen;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: ease-in 0.4s;
+
+    &:hover {
+        border: 1px solid white;
+    }
+ 
+    @include large {
+        display: inline-block;  
+        height: 2em;      
+        margin-top: 1em;
+        margin-left: 0.5em;
+        padding: 0.8em 0.1em;
+        vertical-align: top;
+        width: 48%;
+    }
+}
+
+.js-answer--correct {
+    background-color: #02a22c;
+    animation: correctAnswer;
+    animation-timing-function: ease-in;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+    @keyframes correctAnswer {
+        0% {
+            opacity: 0.5;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+.js-answer--wrong {
+    background-color: #c80a22;
+}
+
+.question-count {
+    position: absolute;
+    top: 97%;
+    right: calc(0% - 0.7em);
+    padding: 0.2rem;
+    font-size: 1rem;
+    background-color: $mainGreen;
+    transform-style: inherit;
+    //3d  side
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 100%;
+        height: 25px;
+        width: 20px;
+        background-color: $darkGreen;
+        transform-origin: left;
+        transform: rotateY(126deg);
+    }
+}
+// questions counters
+.question-count__current {
+    padding-right: 5px;
+}
+
+.question-count__total {
+    display: inline-block;
+    padding-left: 5px;
+
+    &:after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 10px;
+        right: 17px;
+        width: 1em;
+        border: 1px solid white;
+        transform: rotate(120deg);
+    }
+}

@@ -1,0 +1,45 @@
+@import '_mixins.scss';
+
+.categories-cont {
+    width: 100%;
+    height: auto;
+    margin-top: 1.5em;
+    text-align: center;
+    position: relative;
+    perspective: 1000px;
+}
+
+.categories__rules {
+    height: auto;
+    margin: 0 auto;
+    padding: 1.5em;
+    font-weight: bold;
+    color: white;
+}
+///////////////
+//styles for  choose category window
+.categories {
+    width: calc(30% + 13em);
+    height: auto;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border: 1px solid $mainGreen;
+    padding: 1em;
+    color: white;
+    text-align: center;
+}
+
+.categories__headline {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.categories__list {
+    display: inline-block;
+    padding: 0.8em;
+    text-align: center;
+}
+
+.categories__item {
+    display: inline-block;
+}

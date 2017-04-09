@@ -1,0 +1,59 @@
+@import '_mixins.scss'; //styles for all btns
+
+.btn {
+    background-color: inherit;
+    display: block;
+    padding: 0.165em 0.935em;
+    border-radius: 0.365em;
+    border: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn__next {
+    border: 1px solid #32fa64;
+    border-radius: 0;
+    color: #32fa64;
+    font-size: 1.4rem;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    top: 106%;
+    &:hover {
+        color: white;
+    }
+}
+
+.btn__select-category {
+    width: 7.5em;
+    margin: 0 auto 0.8em;
+    margin-right: 0.5rem;
+    background-color: $mainGreen;
+    color: $bgColor;
+    transition: all ease 0.4s;
+
+    &:hover {
+        background-color: $darkGreen;
+        color: white;
+    }
+}
+
+.js-btn__next--hidden {
+    display: none;
+}
+
+.btn__back-home {
+    border: 1px solid #32fa64;
+    border-radius: 0;
+    color: #32fa64;
+    font-size: 1.1rem;
+    margin: 0 auto;
+    margin-top: 1em;
+    width: 9em;
+
+    &:hover {
+        color: white;
+    }
+}

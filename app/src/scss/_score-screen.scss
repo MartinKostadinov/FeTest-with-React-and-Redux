@@ -1,0 +1,68 @@
+//corrcet answers counter  section
+
+.score-section {
+    border: 1px solid $mainGreen;
+    box-sizing: border-box;
+    color: white;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 2em;
+    padding: 0.5em 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: calc(15% + 10rem);
+
+    @include medium {
+
+    }
+}
+
+.score-section__title {
+    border-bottom: 1px solid $mainGreen;
+    font-size: 2.5rem;
+    padding-bottom: 0.5rem;
+    width: 100%;
+}
+
+.score-section__information {
+    display: inline-block;
+    border-right: 1px solid $mainGreen;
+    padding: 0.3125em;
+    span {
+        display: block;
+        font-size: 1.5em;
+    }
+}
+
+.score-section__category {
+    font-weight: 700;
+}
+
+.score-section__score {
+    display: inline-block;
+    position: relative;
+}
+////////////
+//Final user score
+.score-section__score__val {
+    color: #32fa64;
+    display: inline-block;
+    font-size: 3.5rem;
+    text-align: center;
+
+    &:after {
+    border: 1px solid red;
+    content: '';
+    display: block;
+    margin-top: -74%;
+    margin-left: 41%;
+    transform: rotate(91deg);
+    width: 50px;
+    }
+}
+////////////
+//Total questions count
+.score-section__score__total {
+    font-size: 3.5rem;
+}

@@ -1,0 +1,170 @@
+@import '_reset.scss';
+@import '_colors.scss';
+@import '_main-screen.scss';
+@import '_questions.scss';
+@import '_btns.scss';
+@import '_score-screen.scss';
+@import '_mixins.scss';
+
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    height: 100%;
+    @include large {
+        font-size: 18px;
+    }
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    height: 100%;
+}
+//Main elements Styles
+header {
+    background-color: $mainGreen;
+    color: #1c1d23;
+
+    @include large {
+        padding: 1em;
+    }
+}
+//////////////
+#app {
+    height: 100%;
+  > div { 
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: $bgColor;
+    overflow-x: hidden;
+   }
+}
+//header Title
+.title {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+
+    @include large{
+        font-size: 2rem;
+    }
+}
+//////////////
+main {
+    flex: 1;
+    height: 75vh;
+   // margin-bottom: 4em;
+    overflow: hidden;
+    @include medium {
+        height: 100vh;
+    }
+    @include large {
+        height: 75vh;
+    }
+}
+
+footer {
+    background-color: $mainGreen;
+    height: 2.25rem;
+    text-align: center;
+    width: 100%;
+
+    &:hover::before {
+        content: '';
+        position: absolute;
+        background-color: $darkGreen;
+        left: 0;
+        height: inherit;
+        animation: animateFoot;
+        animation-duration: 0.8s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+    }
+    @keyframes animateFoot {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 100%;
+        }
+    }
+
+    @include landscape {
+        margin-top: 3em;
+    }
+
+    @include large {
+       height: 6.25rem;
+       font-size: 1.5rem;    
+    }
+}
+//////////////
+// Footer link
+.mail-link {
+    color: white;
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+//////////////
+//common classes
+.js-hidden {
+    display: none;
+}
+//////////////
+//hide element to left
+.js-hide-to-left {
+    position: absolute;
+    left: 25%;
+    animation: hideToLeft;
+    animation-timing-function: all ease;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+}
+    @keyframes hideToLeft {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+            left: -150%;
+        }
+    }
+//////////////
+//show element form right
+.js-show-from-right {
+    position: absolute;
+    animation: showQuestions;
+    animation-duration: 0.9s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    right: 0;
+}
+@keyframes showQuestions {
+    0% {
+        opacity: 0;
+        left: 150%;
+    }
+
+    100% {
+        opacity: 1;
+        left: 0;
+        right: 0;
+    }
+}
+//////////////
+

@@ -1,0 +1,18 @@
+$medium-width: 560px;
+$large: 960px;
+@mixin medium {
+     @media screen and (min-width: #{$medium-width}) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media screen and (min-width: #{$large}) {
+        @content;
+    } 
+}
+@mixin landscape {
+     @media screen and (min-width: #{$medium-width}) and (max-width: #{$large}) and (orientation: landscape){
+        @content;
+    }
+}
