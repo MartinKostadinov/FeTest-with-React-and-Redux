@@ -4,7 +4,7 @@ This is test application for Web/Front - end developers, created with React and 
 * **Tests:**  the initial  two tests are  10 questions each for  HTML and CSS.
 
 * **Development:** The app is created  with Webpack 2, React, Redux and a lot of plugins and addons, to see them check the package.json.
-* **Demo version:** [DEMO] (https://martinkostadinov.github.io/Fe-test-app-with-React-and-Redux-DEMO/).
+* **Demo version:** [DEMO](https://martinkostadinov.github.io/Fe-test-app-with-React-and-Redux-DEMO/).
 
 ## Run the project
 
